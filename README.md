@@ -126,7 +126,9 @@ Updates the details of an existing book.
 Deletes a book from the library.
 
 **Admin only**
+
 ---
+
 # Reservation APIs
 
 ## Create Reservation
@@ -181,3 +183,32 @@ CREATE DATABASE library_db;
 ## 7.Application will start on
 `http://localhost:8080`.
 
+---
+
+# API Testing
+
+APIs can be tested using `Postman`
+
+## User Flow
+### 1.Register
+### 2.Login
+### 3.Copy JWT token
+### 4.Get books
+### 5.View book details
+### 6.Reserve a book
+### 7.View reservation history
+
+## Admin Flow
+
+### 1.Login as Admin
+### 2.Add book
+### 3.Update book
+### 4.Delete book
+### 5.View all reservations
+
+## Security
+
+### . JWT-based authentication
+### . Password encryption
+### . Role-based authorization
+### . Secured REST API endpoints
