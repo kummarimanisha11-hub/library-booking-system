@@ -126,7 +126,7 @@ Updates the details of an existing book.
 Deletes a book from the library.
 
 **Admin only**
---
+---
 # Reservation APIs
 
 ## Create Reservation
@@ -154,3 +154,20 @@ Returns the reservation history of a user.
 Returns all reservations.
 
 **Admin only**
+
+---
+# Database
+
+This project uses ## MySQL.
+
+## Database Name: ### library_db
+
+Create the database using:
+
+` CREATE DATABASE library_db;`
+
+Database configuration is available in:
+
+`src/main/resources/application.properties`
+
+Use your local MySQL password in `application.properties`.Actual password ni README/GitHub lo pettaku.
