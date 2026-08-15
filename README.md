@@ -200,18 +200,18 @@ APIs can be tested using `Postman`
 
 ## Admin Flow
 
-### 1.Login as Admin
-### 2.Add book
-### 3.Update book
-### 4.Delete book
-### 5.View all reservations
+ 1.Login as Admin
+ 2.Add book
+ 3.Update book
+ 4.Delete book
+ 5.View all reservations
 
 ## Security
 
-### - JWT-based authentication
-### - Password encryption
-### - Role-based authorization
-### - Secured REST API endpoints
+ - JWT-based authentication
+ - Password encryption
+ - Role-based authorization
+ - Secured REST API endpoints
 
 ---
 
