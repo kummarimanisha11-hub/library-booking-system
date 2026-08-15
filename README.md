@@ -173,14 +173,14 @@ CREATE DATABASE library_db;
 ---
 
 # How to Run
-## 1.Clone the repository.
-## 2.Open the project in IntelliJ IDEA.
-## 3.Start MySQL.
-## 4.Create the **library_db** database.
-## 5.Configure MySQL username and password in `application.properties`.
-## 6.Run 
+### 1.Clone the repository.
+### 2.Open the project in IntelliJ IDEA.
+### 3.Start MySQL.
+### 4.Create the **library_db** database.
+### 5.Configure MySQL username and password in `application.properties`.
+### 6.Run 
 `LibraryBookingSystemApplication.java`.
-## 7.Application will start on
+### 7.Application will start on
 `http://localhost:8080`.
 
 ---
@@ -212,3 +212,19 @@ APIs can be tested using `Postman`
 ### . Password encryption
 ### . Role-based authorization
 ### . Secured REST API endpoints
+
+---
+
+## Project Structure
+
+```text
+src/main/java/com/example/librarybookingsystem
+│
+├── config
+├── controller
+├── entity
+├── repository
+├── security
+├── service
+│
+└── LibraryBookingSystemApplication.java
