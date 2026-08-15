@@ -1,17 +1,23 @@
 # Library Booking System – REST API
 
-A backend REST API application for managing library books, users, and book reservations.
+A backend REST API based Library Booking System developed using Java and Spring Boot.
+
+The system allows users to register, login, browse books, and reserve books. Admins can manage books and reservations.
+
+---
 
 ## Objective
 
-The Library Booking System allows users to register, login, browse books, and reserve books. Admins can manage books and reservations.
+To provide a simple and efficient REST API based system for managing library books, users, and reservations.
 
-## Features
+---
+
+## Key Features
 
 - User Registration
 - User Login
 - JWT Authentication
-- Browse Books
+- Browse and Search Books
 - View Book Details
 - Book Reservation
 - View Reservation History
@@ -22,6 +28,8 @@ The Library Booking System allows users to register, login, browse books, and re
 - View All Reservations
 - Role-Based Authorization
 
+---
+
 ## Technologies Used
 
 - Java
@@ -29,27 +37,63 @@ The Library Booking System allows users to register, login, browse books, and re
 - Spring Web
 - Spring Data JPA
 - Spring Security
-- JWT
+- JWT (JSON Web Token)
 - MySQL
 - Maven
 - Postman
 - IntelliJ IDEA
 
-## Project Structure
+---
 
-```text
-src/main/java/com/example/librarybookingsystem
-│
-├── config
-├── controller
-├── entity
-├── repository
-├── security
-├── service
-│
-└── LibraryBookingSystemApplication.java
-##Future Scope
-- Frontend integration using React or Angular
-- Book return and fine management
-- Reminder emails for return deadlines
-- QR code based book scanning
+# Authentication APIs
+
+## 1. Register User
+
+**POST** `/api/auth/register`
+
+### Request Body
+
+```json
+{
+  "name": "Your Name",
+  "email": "your@email.com",
+  "password": "your_password",
+  "role": "USER"
+}
+```
+## login user
+**POST** `/api/auth/login`
+##Request Body
+```json
+{
+ "email":"your@email.com",
+ "password":"your_password"
+}
+```
+##Description
+Authenticates the user and generates a JWT token after successful login.
+The JWT token is used to access protected APIs.
+#Book APIs
+##1. Get All Books
+**GET** ` /api/books`
+##Description
+Returns all books available in the library.
+##2. Get Book By ID
+**GET** `/api/books/{id}`
+##Description
+Returns the details of a specific book using its ID.
+##3. Add Book
+**POST** `/api/books`
+##Description
+Adds a new book to the library.
+**Admin only**
+##4. Update Book
+**PUT** `/api/books/{id}`
+##Description
+Updates the details of an existing book.
+**Admin only**
+##5. Delete Book
+**DELETE** `/api/books/{id}`
+##Description
+Deletes a book from the library.
+**Admin only**
