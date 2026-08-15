@@ -63,37 +63,66 @@ To provide a simple and efficient REST API based system for managing library boo
 ```
 ## login user
 **POST** `/api/auth/login`
-##Request Body
+###Request Body
 ```json
 {
  "email":"your@email.com",
  "password":"your_password"
 }
 ```
-##Description
+###Description
+
+
+
 Authenticates the user and generates a JWT token after successful login.
 The JWT token is used to access protected APIs.
+
+---
+
+
 #Book APIs
+
 ##1. Get All Books
+
 **GET** ` /api/books`
-##Description
+
+###Description
 Returns all books available in the library.
+
 ##2. Get Book By ID
+
 **GET** `/api/books/{id}`
-##Description
+
+###Description
+
 Returns the details of a specific book using its ID.
+
 ##3. Add Book
+
 **POST** `/api/books`
-##Description
+
+###Description
+
 Adds a new book to the library.
+
 **Admin only**
+
 ##4. Update Book
+
 **PUT** `/api/books/{id}`
-##Description
+
+###Description
+
 Updates the details of an existing book.
+
 **Admin only**
+
 ##5. Delete Book
+
 **DELETE** `/api/books/{id}`
-##Description
+
+###Description
+
 Deletes a book from the library.
+
 **Admin only**
