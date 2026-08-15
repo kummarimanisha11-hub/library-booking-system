@@ -48,3 +48,8 @@ src/main/java/com/example/librarybookingsystem
 ├── service
 │
 └── LibraryBookingSystemApplication.java
+##Future Scope
+- Frontend integration using React or Angular
+- Book return and fine management
+- Reminder emails for return deadlines
+- QR code based book scanning
