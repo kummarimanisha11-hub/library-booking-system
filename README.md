@@ -208,10 +208,10 @@ APIs can be tested using `Postman`
 
 ## Security
 
-### . JWT-based authentication
-### . Password encryption
-### . Role-based authorization
-### . Secured REST API endpoints
+### - JWT-based authentication
+### - Password encryption
+### - Role-based authorization
+### - Secured REST API endpoints
 
 ---
 
