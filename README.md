@@ -126,3 +126,31 @@ Updates the details of an existing book.
 Deletes a book from the library.
 
 **Admin only**
+--
+# Reservation APIs
+
+## Create Reservation
+
+**POST** `/api/reservations`
+
+### Description:
+
+Allows a user to reserve a book.
+
+## User Reservation History
+
+**GET** `/api/users/{id}/reservations`
+
+### Description:
+
+Returns the reservation history of a user.
+
+## All Reservations
+
+**GET** `/api/admin/reservations`
+
+### Description:
+
+Returns all reservations.
+
+**Admin only**
