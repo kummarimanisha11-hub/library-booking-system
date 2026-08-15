@@ -70,7 +70,7 @@ To provide a simple and efficient REST API based system for managing library boo
  "password":"your_password"
 }
 ```
-###Description
+### Description
 
 
 
@@ -80,20 +80,20 @@ The JWT token is used to access protected APIs.
 ---
 
 
-#Book APIs
+# Book APIs
 
-##1. Get All Books
+## 1. Get All Books
 
 **GET** ` /api/books`
 
-###Description
+### Description
 Returns all books available in the library.
 
-##2. Get Book By ID
+## 2. Get Book By ID
 
 **GET** `/api/books/{id}`
 
-###Description
+### Description
 
 Returns the details of a specific book using its ID.
 
