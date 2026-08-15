@@ -97,31 +97,31 @@ Returns all books available in the library.
 
 Returns the details of a specific book using its ID.
 
-##3. Add Book
+## 3. Add Book
 
 **POST** `/api/books`
 
-###Description
+### Description
 
 Adds a new book to the library.
 
 **Admin only**
 
-##4. Update Book
+## 4. Update Book
 
 **PUT** `/api/books/{id}`
 
-###Description
+### Description
 
 Updates the details of an existing book.
 
 **Admin only**
 
-##5. Delete Book
+## 5. Delete Book
 
 **DELETE** `/api/books/{id}`
 
-###Description
+### Description
 
 Deletes a book from the library.
 
