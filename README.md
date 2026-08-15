@@ -160,14 +160,24 @@ Returns all reservations.
 
 This project uses ## MySQL.
 
-## Database Name: ### library_db
+**Database Name:** `library_db`
 
 Create the database using:
 
-` CREATE DATABASE library_db;`
+```sql
+CREATE DATABASE library_db;
+```
 
-Database configuration is available in:
+---
 
-`src/main/resources/application.properties`
+# How to Run
+## 1.Clone the repository.
+## 2.Open the project in IntelliJ IDEA.
+## 3.Start MySQL.
+## 4.Create the **library_db** database.
+## 5.Configure MySQL username and password in `application.properties`.
+## 6.Run 
+`LibraryBookingSystemApplication.java`.
+## 7.Application will start on
+`http://localhost:8080`.
 
-Use your local MySQL password in `application.properties`.Actual password ni README/GitHub lo pettaku.
