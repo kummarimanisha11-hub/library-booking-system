@@ -61,9 +61,12 @@ To provide a simple and efficient REST API based system for managing library boo
   "role": "USER"
 }
 ```
-## login user
+## 2.Login user
+
 **POST** `/api/auth/login`
+
 ###Request Body
+
 ```json
 {
  "email":"your@email.com",
@@ -160,7 +163,7 @@ Returns all reservations.
 ---
 # Database
 
-This project uses ## MySQL.
+This project uses MySQL.
 
 **Database Name:** `library_db`
 
