@@ -1,0 +1,81 @@
+<div class="booking-container">
+
+  <div class="booking-card">
+
+    <h1>Library Booking</h1>
+
+    <p>Please enter the booking details.</p>
+
+    <form (ngSubmit)="confirmBooking()">
+
+      <!-- User ID -->
+      <div class="form-group">
+        <label for="userId">User ID</label>
+
+        <input
+          type="number"
+          id="userId"
+          name="userId"
+          [(ngModel)]="booking.userId"
+          placeholder="Enter User ID"
+          required>
+      </div>
+
+      <!-- Book ID -->
+      <div class="form-group">
+        <label for="bookId">Book ID</label>
+
+        <input
+          type="number"
+          id="bookId"
+          name="bookId"
+          [(ngModel)]="booking.bookId"
+          placeholder="Enter Book ID"
+          required>
+      </div>
+
+      <!-- Booking Date -->
+      <div class="form-group">
+        <label for="bookingDate">Booking Date</label>
+
+        <input
+          type="date"
+          id="bookingDate"
+          name="bookingDate"
+          [(ngModel)]="booking.bookingDate"
+          required>
+      </div>
+
+      <!-- Return Date -->
+      <div class="form-group">
+        <label for="returnDate">Return Date</label>
+
+        <input
+          type="date"
+          id="returnDate"
+          name="returnDate"
+          [(ngModel)]="booking.returnDate"
+          required>
+      </div>
+
+      <!-- Status -->
+      <div class="form-group">
+        <label for="status">Status</label>
+
+        <input
+          type="text"
+          id="status"
+          name="status"
+          [(ngModel)]="booking.status"
+          readonly>
+      </div>
+
+      <button type="submit">
+        Confirm Booking
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

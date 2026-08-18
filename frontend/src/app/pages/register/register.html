@@ -1,0 +1,55 @@
+<div class="register-container">
+  <div class="register-card">
+
+    <h1>Library Booking System</h1>
+    <h2>Register</h2>
+
+    <form (ngSubmit)="register()">
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="user.name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      <button type="submit">Register</button>
+
+      <p>
+        Already have an account?
+        <a routerLink="/login">Login</a>
+      </p>
+
+    </form>
+
+  </div>
+</div>

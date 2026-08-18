@@ -1,0 +1,74 @@
+<div class="admin-books">
+
+  <h2>Admin - Book Management</h2>
+
+  <form (ngSubmit)="addBook()">
+
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="book.title"
+      placeholder="Book Title"
+      required
+    />
+
+    <input
+      type="text"
+      name="author"
+      [(ngModel)]="book.author"
+      placeholder="Author"
+      required
+    />
+
+    <input
+      type="text"
+      name="category"
+      [(ngModel)]="book.category"
+      placeholder="Category"
+      required
+    />
+
+    <button type="submit">Add Book</button>
+
+  </form>
+
+  <hr>
+
+  <h3>All Books</h3>
+
+  <table *ngIf="books.length > 0">
+
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Available</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr *ngFor="let book of books">
+
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.category }}</td>
+
+      <td>
+        {{ book.available ? 'Available' : 'Not Available' }}
+      </td>
+
+    </tr>
+
+    </tbody>
+
+  </table>
+
+  <p *ngIf="books.length === 0">
+    No books found.
+  </p>
+
+</div>

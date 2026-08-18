@@ -1,0 +1,46 @@
+<div class="books-container">
+
+  <h1>Library Books</h1>
+
+  <div class="book-card" *ngFor="let book of books">
+
+    <h2>{{ book.title }}</h2>
+
+    <p>
+      <strong>Author:</strong> {{ book.author }}
+    </p>
+
+    <p>
+      <strong>Category:</strong> {{ book.category }}
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+
+
+      <span *ngIf="book.available">
+        Available
+      </span>
+
+      <span *ngIf="!book.available">
+        Not Available
+      </span>
+
+    </p>
+    <button
+      *ngIf="book.available"
+      type="button"
+      (click)="bookNow(book)">
+      Book Now
+    </button>
+
+    <button
+      *ngIf="!book.available"
+      type="button"
+      disabled>
+      Not Available
+    </button>
+
+  </div>
+
+</div>

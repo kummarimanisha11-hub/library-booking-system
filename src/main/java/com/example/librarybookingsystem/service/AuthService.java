@@ -23,7 +23,14 @@ public class AuthService {
     // REGISTER
     public User register(User user) {
 
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(
+                passwordEncoder.encode(user.getPassword())
+        );
+
+        // Default role for normal users
+        if (user.getRole() == null || user.getRole().isBlank()) {
+            user.setRole("USER");
+        }
 
         return userRepository.save(user);
     }
@@ -36,15 +43,22 @@ public class AuthService {
                 .filter(u -> u.getEmail().equals(user.getEmail()))
                 .findFirst()
                 .orElseThrow(() ->
-                        new RuntimeException("Invalid email or password"));
+                        new RuntimeException(
+                                "Invalid email or password"
+                        ));
 
         if (!passwordEncoder.matches(
                 user.getPassword(),
                 existingUser.getPassword())) {
 
-            throw new RuntimeException("Invalid email or password");
+            throw new RuntimeException(
+                    "Invalid email or password"
+            );
         }
 
-        return jwtService.generateToken(existingUser.getEmail(), existingUser.getRole());
+        return jwtService.generateToken(
+                existingUser.getEmail(),
+                existingUser.getRole()
+        );
     }
 }

@@ -4,6 +4,8 @@ import com.example.librarybookingsystem.entity.User;
 import com.example.librarybookingsystem.service.AuthService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -22,7 +24,10 @@ public class AuthController {
 
     // LOGIN
     @PostMapping("/login")
-    public String login(@RequestBody User user) {
-        return authService.login(user);
+    public Map<String, String> login(@RequestBody User user) {
+
+        String token = authService.login(user);
+
+        return Map.of("token", token);
     }
 }
