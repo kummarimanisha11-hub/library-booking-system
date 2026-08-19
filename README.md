@@ -1,4 +1,4 @@
-📚# Library Booking System
+📚 # Library Booking System
 
 A full-stack Library Booking System developed using Angular, Spring Boot, Spring Security, JWT Authentication, and MySQL.
 
