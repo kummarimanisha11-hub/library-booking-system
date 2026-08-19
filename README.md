@@ -114,14 +114,14 @@ When a book is returned:
 ## Authentication
 
 | Method | Endpoint | Description |
-|---|---|---|
+| --- | --- | --- |
 | POST | `/api/auth/register` | Register a new user |
 | POST | `/api/auth/login` | Login and generate JWT |
 
 ## Books
 
 | Method | Endpoint | Access |
-|---|---|---|
+| --- | --- | --- |
 | GET | `/api/books` | Public |
 | POST | `/api/books` | Admin |
 | PUT | `/api/books/{id}` | Admin |
@@ -130,7 +130,7 @@ When a book is returned:
 ## Bookings
 
 | Method | Endpoint | Access |
-|---|---|---|
+| --- | --- | --- |
 | POST | `/api/bookings` | Authenticated |
 | GET | `/api/bookings` | Admin |
 | GET | `/api/bookings/{id}` | Authenticated |
