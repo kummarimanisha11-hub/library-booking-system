@@ -4,9 +4,10 @@ A full-stack Library Booking System developed using Angular, Spring Boot, Spring
 
 The application allows users to register, login securely, view available books, book books, and view their reservation history. Administrators can manage books and bookings using secured APIs.
 
-# Features
+# ✨ Features
 
-## User Features
+
+## 👤 User Features
 
 - User Registration
 - User Login
@@ -18,7 +19,7 @@ The application allows users to register, login securely, view available books, 
 - Return books
 - Role-based access
 
-# Admin Features
+## 👨‍💼 Admin Features
 
 - Admin Login
 - View all books
@@ -28,7 +29,7 @@ The application allows users to register, login securely, view available books, 
 - View all bookings
 - Role-based authorization
 
-# Technologies Used
+# 🛠️ Technologies Used
 
 ## Frontend
 
@@ -108,31 +109,34 @@ When a book is returned:
 - Booking status becomes "RETURNED".
 - Book availability becomes "true".
 
-🔗 Main API Endpoints
+# 🔗 Main API Endpoints
 
 ## Authentication
 
-Method| Endpoint| Description
-`POST| "/api/auth/register"|` Register a new user
-`POST| "/api/auth/login"|` Login and generate JWT
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/auth/register` | Register a new user |
+| POST | `/api/auth/login` | Login and generate JWT |
 
 ## Books
 
-Method| Endpoint| Access
-`GET| "/api/books"|` Public
-`POST| "/api/books"|` Admin
-`PUT| "/api/books/{id}"|` Admin
-`DELETE| "/api/books/{id}"`| Admin
+| Method | Endpoint | Access |
+|---|---|---|
+| GET | `/api/books` | Public |
+| POST | `/api/books` | Admin |
+| PUT | `/api/books/{id}` | Admin |
+| DELETE | `/api/books/{id}` | Admin |
 
 ## Bookings
 
-Method| Endpoint| Access
-`POST| "/api/bookings"|` Authenticated
-`GET| "/api/bookings"|` Admin
-`GET| "/api/bookings/{id}"`| Authenticated
-`GET| "/api/bookings/user/{userId}"|` Authenticated
-`PUT| "/api/bookings/{id}"|` Authenticated
-`DELETE| "/api/bookings/{id}"|` Authenticated
+| Method | Endpoint | Access |
+|---|---|---|
+| POST | `/api/bookings` | Authenticated |
+| GET | `/api/bookings` | Admin |
+| GET | `/api/bookings/{id}` | Authenticated |
+| GET | `/api/bookings/user/{userId}` | Authenticated |
+| PUT | `/api/bookings/{id}` | Authenticated |
+| DELETE | `/api/bookings/{id}` | Authenticated |
 
 # Project Structure
 
