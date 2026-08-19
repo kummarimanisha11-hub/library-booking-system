@@ -1,189 +1,270 @@
-Library Booking System – Frontend
+📚 Library Booking System
 
-This is the frontend application for the Library Booking System, developed using Angular 22.
+A full-stack Library Booking System developed using Angular, Spring Boot, Spring Security, JWT Authentication, and MySQL.
 
-The frontend communicates with the Spring Boot REST API backend to provide user authentication, book management, and library booking functionality.
+The application allows users to register, login securely, view available books, book books, and view their reservation history. Administrators can manage books and bookings using secured APIs.
 
-Features
+🚀 Features
 
-User Registration
+👤 User Features
 
-User Login
+- User Registration
+- User Login
+- JWT-based Authentication
+- Secure password encryption using BCrypt
+- View available books
+- Book an available book
+- View booking history
+- Return books
+- Role-based access
 
-JWT-based Authentication
+👨‍💼 Admin Features
 
-JWT Token handling using HTTP Interceptor
+- Admin Login
+- View all books
+- Add new books
+- Update books
+- Delete books
+- View all bookings
+- Role-based authorization
 
-View available books
+🛠️ Technologies Used
 
-Book a library book
+Frontend
 
-View booking/reservation history
+- Angular 22
+- TypeScript
+- HTML5
+- CSS3
+- Angular Router
+- Angular HttpClient
+- HTTP Interceptor
 
-Admin book management
+Backend
 
-Add new books as Admin
+- Java
+- Spring Boot
+- Spring MVC
+- Spring Data JPA
+- Hibernate
+- Spring Security
+- JWT
+- BCrypt
+- Maven
 
-Role-based access for User and Admin
+Database
 
-REST API integration with Spring Boot backend
+- MySQL
 
-Technologies Used
+Tools
 
-Angular 22
+- IntelliJ IDEA
+- Visual Studio Code
+- Postman
+- Git
+- GitHub
 
-TypeScript
+🏗️ Architecture
 
-HTML
+The backend follows a layered architecture:
 
-CSS
+Controller → Service → Repository → Entity → MySQL
 
-Angular Router
+- Controller: Handles HTTP requests and API responses.
+- Service: Contains the business logic.
+- Repository: Performs database operations using Spring Data JPA.
+- Entity: Represents database tables.
+- MySQL: Stores application data.
 
-Angular HttpClient
+🔐 Authentication
 
-JWT Authentication
+The application uses JWT for secure authentication.
 
-Spring Boot REST API
+Login Flow:
 
-Project Structure
-
-frontend/
-├── src/
-│   └── app/
-│       ├── pages/
-│       │   ├── login/
-│       │   ├── register/
-│       │   ├── books/
-│       │   ├── booking/
-│       │   └── admin-books/
-│       │
-│       ├── services/
-│       │   ├── auth.ts
-│       │   ├── auth.interceptor.ts
-│       │   ├── book.service.ts
-│       │   └── booking.service.ts
-│       │
-│       ├── app.config.ts
-│       ├── app.routes.ts
-│       └── app.ts
-│
-├── public/
-├── package.json
-├── angular.json
-└── README.md
-
-Application Flow
-
-User
-↓
-Register / Login
-↓
-JWT Token
-↓
-Angular HTTP Interceptor
-↓
-Spring Boot REST API
-↓
-MySQL Database
-
-User Features
-
-A normal user can:
-
-Register an account.
-
-Login using email and password.
-
-Receive a JWT token after successful login.
-
-View available books.
-
-Book an available book.
-
-View their booking history.
-
-Admin Features
-
-An Admin can:
-
-Login using Admin credentials.
-
-Access Admin Book Management.
-
-View all books.
-
-Add new books.
-
-Manage books using secured REST APIs.
-
-Authentication
-
-The application uses JWT (JSON Web Token) for authentication.
+User Login → Spring Boot → Password Verification → JWT Token → Angular HTTP Interceptor → Spring Security → Protected API
 
 After successful login, the JWT token is stored in the browser's localStorage.
 
-The Angular HTTP Interceptor automatically adds the token to API requests:
+The Angular HTTP Interceptor automatically adds the token to secured API requests.
+
+Authorization header:
 
 Authorization: Bearer <JWT_TOKEN>
 
-The Spring Boot backend validates the token and checks the user's role.
+The Spring Boot backend validates the JWT token and checks the user's role before allowing access to protected APIs.
 
-Backend API
+📖 Booking Flow
 
-The Angular frontend communicates with the Spring Boot backend running on:
+User Login → View Available Books → Select Book → Create Booking → Check Availability → Save Booking → Update Book Availability
+
+When a book is successfully booked:
+
+- Booking status becomes "BOOKED".
+- Book availability becomes "false".
+
+When a book is returned:
+
+- Booking status becomes "RETURNED".
+- Book availability becomes "true".
+
+🔗 Main API Endpoints
+
+Authentication
+
+Method| Endpoint| Description
+POST| "/api/auth/register"| Register a new user
+POST| "/api/auth/login"| Login and generate JWT
+
+Books
+
+Method| Endpoint| Access
+GET| "/api/books"| Public
+POST| "/api/books"| Admin
+PUT| "/api/books/{id}"| Admin
+DELETE| "/api/books/{id}"| Admin
+
+Bookings
+
+Method| Endpoint| Access
+POST| "/api/bookings"| Authenticated
+GET| "/api/bookings"| Admin
+GET| "/api/bookings/{id}"| Authenticated
+GET| "/api/bookings/user/{userId}"| Authenticated
+PUT| "/api/bookings/{id}"| Authenticated
+DELETE| "/api/bookings/{id}"| Authenticated
+
+📂 Project Structure
+
+library-booking-system/
+
+├── src/
+
+│   └── main/
+
+│       └── java/
+
+│           └── com/example/librarybookingsystem/
+
+│               ├── config/
+
+│               ├── controller/
+
+│               ├── entity/
+
+│               ├── repository/
+
+│               ├── security/
+
+│               └── service/
+
+│
+
+├── frontend/
+
+│   ├── src/
+
+│   │   └── app/
+
+│   │       ├── pages/
+
+│   │       │   ├── login/
+
+│   │       │   ├── register/
+
+│   │       │   ├── books/
+
+│   │       │   ├── booking/
+
+│   │       │   └── admin-books/
+
+│   │       │
+
+│   │       └── services/
+
+│   │           ├── auth.ts
+
+│   │           ├── auth.interceptor.ts
+
+│   │           ├── book.service.ts
+
+│   │           └── booking.service.ts
+
+│   │
+
+│   ├── package.json
+
+│   └── angular.json
+
+│
+
+├── pom.xml
+
+└── README.md
+
+💻 How to Run
+
+Backend
+
+Make sure MySQL is running.
+
+Open the project in IntelliJ IDEA and run the Spring Boot application.
+
+Backend URL:
 
 http://localhost:8080
 
-Example API endpoints:
+Frontend
 
-GET    /api/books
-POST   /api/books
-POST   /api/bookings
-GET    /api/bookings/user/{userId}
-POST   /api/auth/login
-POST   /api/auth/register
+Open a terminal inside the frontend folder.
 
-Running the Project
-
-1. Install dependencies
+Install dependencies:
 
 npm install
 
-2. Start the Angular development server
+Start the Angular development server:
 
 ng serve
 
-Open the application in your browser:
+Open the application:
 
-http://localhost:4200/
+http://localhost:4200
 
-The application automatically reloads when source files are modified.
+🧪 Testing
 
-Build
+The REST APIs were tested using Postman.
 
-To create a production build:
+The following functionalities were tested:
 
-ng build
+- User Registration
+- User Login
+- JWT Authentication
+- Book APIs
+- Booking APIs
+- Book Availability
+- Booking History
+- Return Book
+- Admin Book Management
+- Role-based Authorization
 
-The build files are generated inside the dist/ directory.
+🗄️ Database
 
-Testing
+The application uses MySQL as the database.
 
-To run unit tests:
+Main entities:
 
-ng test
+- User
+- Book
+- Booking
 
-Backend Requirement
+Spring Data JPA and Hibernate are used for database operations.
 
-Before using the frontend, make sure the Spring Boot backend is running on:
+🎯 Project Objective
 
-http://localhost:8080
+The objective of this project is to provide a secure and user-friendly digital library system where users can reserve books and manage their reservations, while administrators can securely manage library resources.
 
-The backend connects to the MySQL database and provides the REST APIs used by this Angular application.
-
-Author
+👩‍💻 Author
 
 Maneesha Kummari
 
-Library Booking System – Angular Frontend
+B.Tech – Computer Science & Engineering
