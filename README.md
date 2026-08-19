@@ -1,12 +1,12 @@
-📚 Library Booking System
+📚# Library Booking System
 
 A full-stack Library Booking System developed using Angular, Spring Boot, Spring Security, JWT Authentication, and MySQL.
 
 The application allows users to register, login securely, view available books, book books, and view their reservation history. Administrators can manage books and bookings using secured APIs.
 
-🚀 Features
+🚀# Features
 
-👤 User Features
+👤## User Features
 
 - User Registration
 - User Login
@@ -18,7 +18,7 @@ The application allows users to register, login securely, view available books, 
 - Return books
 - Role-based access
 
-👨‍💼 Admin Features
+👨‍💼# Admin Features
 
 - Admin Login
 - View all books
@@ -28,9 +28,9 @@ The application allows users to register, login securely, view available books, 
 - View all bookings
 - Role-based authorization
 
-🛠️ Technologies Used
+🛠️# Technologies Used
 
-Frontend
+## Frontend
 
 - Angular 22
 - TypeScript
@@ -40,7 +40,7 @@ Frontend
 - Angular HttpClient
 - HTTP Interceptor
 
-Backend
+## Backend
 
 - Java
 - Spring Boot
@@ -52,11 +52,11 @@ Backend
 - BCrypt
 - Maven
 
-Database
+## Database
 
 - MySQL
 
-Tools
+## Tools
 
 - IntelliJ IDEA
 - Visual Studio Code
@@ -64,7 +64,7 @@ Tools
 - Git
 - GitHub
 
-🏗️ Architecture
+🏗️# Architecture
 
 The backend follows a layered architecture:
 
@@ -76,11 +76,11 @@ Controller → Service → Repository → Entity → MySQL
 - Entity: Represents database tables.
 - MySQL: Stores application data.
 
-🔐 Authentication
+🔐# Authentication
 
 The application uses JWT for secure authentication.
 
-Login Flow:
+## Login Flow:
 
 User Login → Spring Boot → Password Verification → JWT Token → Angular HTTP Interceptor → Spring Security → Protected API
 
@@ -88,13 +88,13 @@ After successful login, the JWT token is stored in the browser's localStorage.
 
 The Angular HTTP Interceptor automatically adds the token to secured API requests.
 
-Authorization header:
+## Authorization header:
 
 Authorization: Bearer <JWT_TOKEN>
 
 The Spring Boot backend validates the JWT token and checks the user's role before allowing access to protected APIs.
 
-📖 Booking Flow
+📖# Booking Flow
 
 User Login → View Available Books → Select Book → Create Booking → Check Availability → Save Booking → Update Book Availability
 
@@ -108,35 +108,35 @@ When a book is returned:
 - Booking status becomes "RETURNED".
 - Book availability becomes "true".
 
-🔗 Main API Endpoints
+🔗# Main API Endpoints
 
-Authentication
+## Authentication
 
 Method| Endpoint| Description
-POST| "/api/auth/register"| Register a new user
-POST| "/api/auth/login"| Login and generate JWT
+`POST| "/api/auth/register"|` Register a new user
+`POST| "/api/auth/login"|` Login and generate JWT
 
-Books
-
-Method| Endpoint| Access
-GET| "/api/books"| Public
-POST| "/api/books"| Admin
-PUT| "/api/books/{id}"| Admin
-DELETE| "/api/books/{id}"| Admin
-
-Bookings
+## Books
 
 Method| Endpoint| Access
-POST| "/api/bookings"| Authenticated
-GET| "/api/bookings"| Admin
-GET| "/api/bookings/{id}"| Authenticated
-GET| "/api/bookings/user/{userId}"| Authenticated
-PUT| "/api/bookings/{id}"| Authenticated
-DELETE| "/api/bookings/{id}"| Authenticated
+`GET| "/api/books"|` Public
+`POST| "/api/books"|` Admin
+`PUT| "/api/books/{id}"|` Admin
+`DELETE| "/api/books/{id}"`| Admin
 
-📂 Project Structure
+## Bookings
 
-library-booking-system/
+Method| Endpoint| Access
+`POST| "/api/bookings"|` Authenticated
+`GET| "/api/bookings"|` Admin
+`GET| "/api/bookings/{id}"`| Authenticated
+`GET| "/api/bookings/user/{userId}"|` Authenticated
+`PUT| "/api/bookings/{id}"|` Authenticated
+`DELETE| "/api/bookings/{id}"|` Authenticated
+
+📂# Project Structure
+
+## library-booking-system/
 
 ├── src/
 
@@ -202,9 +202,9 @@ library-booking-system/
 
 └── README.md
 
-💻 How to Run
+💻# How to Run
 
-Backend
+## Backend
 
 Make sure MySQL is running.
 
@@ -214,7 +214,7 @@ Backend URL:
 
 http://localhost:8080
 
-Frontend
+## Frontend
 
 Open a terminal inside the frontend folder.
 
@@ -230,7 +230,7 @@ Open the application:
 
 http://localhost:4200
 
-🧪 Testing
+🧪# Testing
 
 The REST APIs were tested using Postman.
 
@@ -247,7 +247,7 @@ The following functionalities were tested:
 - Admin Book Management
 - Role-based Authorization
 
-🗄️ Database
+🗄️# Database
 
 The application uses MySQL as the database.
 
@@ -259,11 +259,11 @@ Main entities:
 
 Spring Data JPA and Hibernate are used for database operations.
 
-🎯 Project Objective
+🎯# Project Objective
 
 The objective of this project is to provide a secure and user-friendly digital library system where users can reserve books and manage their reservations, while administrators can securely manage library resources.
 
-👩‍💻 Author
+👩‍💻# Author
 
 Maneesha Kummari
 
