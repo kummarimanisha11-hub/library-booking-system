@@ -1,12 +1,12 @@
-📚 # Library Booking System
+ # Library Booking System
 
 A full-stack Library Booking System developed using Angular, Spring Boot, Spring Security, JWT Authentication, and MySQL.
 
 The application allows users to register, login securely, view available books, book books, and view their reservation history. Administrators can manage books and bookings using secured APIs.
 
-🚀# Features
+# Features
 
-👤## User Features
+## User Features
 
 - User Registration
 - User Login
@@ -18,7 +18,7 @@ The application allows users to register, login securely, view available books, 
 - Return books
 - Role-based access
 
-👨‍💼# Admin Features
+# Admin Features
 
 - Admin Login
 - View all books
@@ -28,7 +28,7 @@ The application allows users to register, login securely, view available books, 
 - View all bookings
 - Role-based authorization
 
-🛠️# Technologies Used
+# Technologies Used
 
 ## Frontend
 
@@ -64,7 +64,7 @@ The application allows users to register, login securely, view available books, 
 - Git
 - GitHub
 
-🏗️# Architecture
+# Architecture
 
 The backend follows a layered architecture:
 
@@ -76,7 +76,7 @@ Controller → Service → Repository → Entity → MySQL
 - Entity: Represents database tables.
 - MySQL: Stores application data.
 
-🔐# Authentication
+# Authentication
 
 The application uses JWT for secure authentication.
 
@@ -94,7 +94,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 The Spring Boot backend validates the JWT token and checks the user's role before allowing access to protected APIs.
 
-📖# Booking Flow
+# Booking Flow
 
 User Login → View Available Books → Select Book → Create Booking → Check Availability → Save Booking → Update Book Availability
 
@@ -108,7 +108,7 @@ When a book is returned:
 - Booking status becomes "RETURNED".
 - Book availability becomes "true".
 
-🔗# Main API Endpoints
+🔗 Main API Endpoints
 
 ## Authentication
 
@@ -134,7 +134,7 @@ Method| Endpoint| Access
 `PUT| "/api/bookings/{id}"|` Authenticated
 `DELETE| "/api/bookings/{id}"|` Authenticated
 
-📂# Project Structure
+# Project Structure
 
 ## library-booking-system/
 
@@ -202,7 +202,7 @@ Method| Endpoint| Access
 
 └── README.md
 
-💻# How to Run
+# How to Run
 
 ## Backend
 
@@ -230,7 +230,7 @@ Open the application:
 
 http://localhost:4200
 
-🧪# Testing
+# Testing
 
 The REST APIs were tested using Postman.
 
@@ -247,7 +247,7 @@ The following functionalities were tested:
 - Admin Book Management
 - Role-based Authorization
 
-🗄️# Database
+# Database
 
 The application uses MySQL as the database.
 
@@ -259,11 +259,11 @@ Main entities:
 
 Spring Data JPA and Hibernate are used for database operations.
 
-🎯# Project Objective
+# Project Objective
 
 The objective of this project is to provide a secure and user-friendly digital library system where users can reserve books and manage their reservations, while administrators can securely manage library resources.
 
-👩‍💻# Author
+# Author
 
 Maneesha Kummari
 
